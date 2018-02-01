@@ -12,6 +12,7 @@ store.subscribe(() => {
 	console.log('Store:', store.getState());
 });
 
+
 ReactDOM.render(
 	<Provider store={store}>
 		<App />

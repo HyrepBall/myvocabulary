@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Paper from 'material-ui/Paper';
 import Button from 'material-ui/Button';
 import Radio, { RadioGroup } from 'material-ui/Radio';
@@ -161,6 +162,10 @@ class Testing extends Component {
 			</div>
 		);
 	}
+}
+
+Testing.propTypes = {
+  vocabularyData: PropTypes.array.isRequired,
 }
 
 export default connect(

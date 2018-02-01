@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Table, { 
 	TableBody, 
 	TableCell, 
@@ -20,7 +21,7 @@ const colors = {
 	blue: '#2196F3',
 }
 
-class App extends Component {
+class Vocabulary extends Component {
 
 	constructor(props, context) {
 		super(props, context);
@@ -263,6 +264,13 @@ class App extends Component {
 	}
 }
 
+Vocabulary.propTypes = {
+  onAddWord: PropTypes.func.isRequired,
+  onDeleteWord: PropTypes.func.isRequired,
+  onEditWord: PropTypes.func.isRequired,
+  onSaveWord: PropTypes.func.isRequired,
+}
+
 export default connect(
 	state => ({
 		vocabularyData: state.vocabularyStore
@@ -281,5 +289,5 @@ export default connect(
 			dispatch({ type: 'SAVE_EDIT_WORD', payload: {wordObj, index}  })
 		},
 	})
-)(App);
+)(Vocabulary);
 
