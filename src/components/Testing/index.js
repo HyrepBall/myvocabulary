@@ -144,7 +144,7 @@ class Testing extends Component {
 											</div>
 											<div style={{ textAlign: 'center' }} >
 												<Button 
-													raised 
+													raised="true"
 													size="small" 
 													style={{ backgroundColor: colors.blue, color: '#fff', }} 
 													onClick={(e) => this.handleNextQuestion(e, trueEl) }

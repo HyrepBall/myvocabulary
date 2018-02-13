@@ -175,7 +175,7 @@ class Vocabulary extends Component {
 							style={{ margin: '0 20px 0 0', }}
 							onChange={e => this.handleAddWordRu(e)}
 						/>
-						<Button raised color="default" onClick={(e) => this.handleAddWord(e) }>
+						<Button raised="true" variant="raised" color="primary" onClick={(e) => this.handleAddWord(e) }>
 							ADD
 							<Add/>
 						</Button>
